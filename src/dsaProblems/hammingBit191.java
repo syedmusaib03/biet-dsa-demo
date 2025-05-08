@@ -1,4 +1,4 @@
-package leetcode;
+package dsaProblems;
 
 public class hammingBit191 {
     //with using modulo

@@ -1,29 +1,33 @@
 package work;
 
-public class work1 {
-    public static int sea(int[] arr, int start, int end, int target) {
 
+class CountSort {
+
+    public static int  sort() {
+        int n = 40;
+        int start = 0;
+        int end = n/2+1;
+        int res = -1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (arr[mid] < target) {
-
-                return sea(arr, start = mid + 1, end, 6);
-
-            } else if (target < arr[mid]) {
-                return sea(arr, start, end = mid - 1, 6);
-
-
-            } else {
-                return mid;
+            int sq = mid * mid;
+            if (sq == n) {
+                res = mid;
+                break;
+            } else if (sq < n) {
+                res = mid;
+                start = mid+1;
             }
-
+            else {
+                end = mid-1;
+            }
         }
-        return -1;
+        return res;
+
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 6, 7, 8};
-        int start = 0 ,end = arr.length-1,target = 6;
-        System.out.println(sea(arr,start,end,target ));
+        System.out.println(sort());
+
     }
 }

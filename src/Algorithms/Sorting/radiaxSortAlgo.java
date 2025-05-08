@@ -1,6 +1,6 @@
 package Algorithms.Sorting;
 
-public class radiaxSort {
+public class radiaxSortAlgo {
     public static void radixSort(int[] arr) {
 
     }
