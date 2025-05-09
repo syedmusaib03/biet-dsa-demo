@@ -1,33 +1,21 @@
 package work;
 
+import java.util.Stack;
 
-class CountSort {
-
-    public static int  sort() {
-        int n = 40;
-        int start = 0;
-        int end = n/2+1;
-        int res = -1;
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-            int sq = mid * mid;
-            if (sq == n) {
-                res = mid;
-                break;
-            } else if (sq < n) {
-                res = mid;
-                start = mid+1;
-            }
-            else {
-                end = mid-1;
-            }
-        }
-        return res;
+public class work1 {
+    public static void sort(int[] arr){
 
     }
 
     public static void main(String[] args) {
-        System.out.println(sort());
-
+        Stack<Integer> s = new Stack<>();
+        int[] arr = {10, 20, 30, 40, 50};
+        for (int num : arr) {
+            s.push(num);
+        }
+        for (int num : arr) {
+            System.out.println(s.pop());
+        }
+        System.out.println(s.isEmpty());
     }
 }
