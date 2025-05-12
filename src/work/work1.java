@@ -1,21 +1,20 @@
 package work;
 
-import java.util.Stack;
+import java.io.*;
+import java.nio.Buffer;
 
 public class work1 {
-    public static void sort(int[] arr){
+    public static void main(String[] args) throws IOException {
 
-    }
+        String filepath = "./src/work/example.txt";
+        try(BufferedWriter reader = new BufferedWriter(new FileWriter(filepath,true))){
+        reader.newLine();
+         reader.append("Syed Armaan");
 
-    public static void main(String[] args) {
-        Stack<Integer> s = new Stack<>();
-        int[] arr = {10, 20, 30, 40, 50};
-        for (int num : arr) {
-            s.push(num);
+          reader.append("Syed Musaib");
+
+        }catch (IOException e){
+            System.out.println(e.getMessage());
         }
-        for (int num : arr) {
-            System.out.println(s.pop());
-        }
-        System.out.println(s.isEmpty());
     }
 }

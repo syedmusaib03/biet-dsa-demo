@@ -2,30 +2,37 @@ package exceptionHandling;
 
 
 public class exceptionHandling1 {
+    //static Block
+    static {
+        System.out.println("Inside The Static Block");
+    }
+
     public static void main(String[] args) {
-        int i = 2, j = 0, k ;
+        int i = 4;
+        int j = 0;
+        int k;
 
         try {
             k = i / j;
             System.out.println(k);
         } catch (ArithmeticException e) {
-            System.out.println("Cannot Divide By Zero");
-           // e.printStackTrace(); // to know which line has error
-        } finally {
-            System.out.println("End Of Exception");
+            System.out.println("Arithimetic Exception Occured");
+           //  e.printStackTrace(); // to know which line has error
+        } catch (NullPointerException e) {
+            System.out.println("Null Pointer Exception");
+        } catch (Exception e) { //it handles all type of above exception and need not to specify seprately
+            System.out.println(e);
+            
         }
 
-        //we can create object for iib like this also
+
+        //we can create object for instance initializer block like this also
         //to print iib we need to create object compulsorly
         new exceptionHandling1();
         {
-            System.out.println("instance initializer block");
+            System.out.println("Instance Initializer Block");
         }
 
 
-    }
-    //static Block
-    static {
-        System.out.println("lastly typed");
     }
 }
