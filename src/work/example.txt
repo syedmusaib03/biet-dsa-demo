@@ -1,2 +1,0 @@
-When using BufferedReader in Java, the data you read is always in the form of a String, so you don't need to specify a data type at the time of reading from it. However, if you want to work with other data types (like int, double, etc.), you must explicitly convert the string input using parsing methods.
-Syed ArmaanSyed Musaib
